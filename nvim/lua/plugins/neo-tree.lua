@@ -8,5 +8,10 @@ return {
   },
   config = function()
     vim.keymap.set('n', '<C-n>', ':Neotree filesystem reveal left toggle<CR>')
+    require("neo-tree").setup({
+      filesystem = {
+        hide_hidden = false
+      }
+    })
   end
 }
